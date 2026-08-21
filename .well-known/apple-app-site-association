@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "L336K6R7P8.cn.com.unitrend.ienv",
+        "paths": ["/iENV", "/iENV/*"]
+      }
+    ]
+  }
+}
