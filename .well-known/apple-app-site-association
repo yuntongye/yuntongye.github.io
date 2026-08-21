@@ -4,7 +4,15 @@
     "details": [
       {
         "appID": "L336K6R7P8.cn.com.unitrend.ienv",
-        "paths": ["/iENV", "/iENV/*","*"]
+        "paths": ["/iENV", "/iENV/*"]
+      },
+      {
+        "appID": "L336K6R7P8.com.uni-trend.thermalmobile",
+        "paths": ["/ThermalMobile", "/ThermalMobile/*"]
+      },
+      {
+        "appID": "L336K6R7P8.com.unit.thermallink",
+        "paths": ["*"]
       }
     ]
   }
