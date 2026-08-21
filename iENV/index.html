@@ -1,1 +1,162 @@
 
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>iENV - 优利德测量工具</title>
+    
+    <!-- 
+        智能应用横幅 (Smart App Banner) 核心标签
+        app-id: 从你提供的App Store链接中获取的ID
+        app-argument: 可选，用于传递深度链接数据，此处设为网站首页
+    -->
+    <meta name="apple-itunes-app" content="app-id=1260827700, app-argument=https://idmm.ayunlian.com/iENV">
+  
+    <!-- 基本样式，让页面在手机上显示更舒适 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #f2f5f9;
+            color: #1c1c1e;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            max-width: 640px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 30px 24px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            margin-top: 20px;
+        }
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 18px;
+            background: #0052d9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 12px rgba(0, 82, 217, 0.3);
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        .subtitle {
+            font-size: 16px;
+            color: #6c6c70;
+            margin-bottom: 20px;
+        }
+        .badge {
+            display: inline-block;
+            background: #e5e5ea;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #3a3a3c;
+            margin-bottom: 20px;
+        }
+        .description {
+            font-size: 16px;
+            color: #3a3a3c;
+            margin-bottom: 24px;
+        }
+        .description strong {
+            color: #0052d9;
+        }
+        .download-btn {
+            display: inline-block;
+            background: #007aff;
+            color: white;
+            text-decoration: none;
+            padding: 12px 32px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 18px;
+            box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+            transition: background 0.2s;
+            margin-bottom: 8px;
+        }
+        .download-btn:active {
+            background: #005bbf;
+        }
+        .note {
+            font-size: 14px;
+            color: #8e8e93;
+            margin-top: 16px;
+            border-top: 1px solid #e5e5ea;
+            padding-top: 16px;
+            text-align: center;
+        }
+        .note a {
+            color: #007aff;
+            text-decoration: none;
+        }
+        /* 在非iOS设备上，横幅不会显示，页面内容保持友好 */
+        @media (max-width: 480px) {
+            .container { padding: 20px 16px; }
+            h1 { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 模拟App图标 -->
+        <div class="app-icon">iE</div>
+        
+        <h1>iENV</h1>
+        <div class="subtitle">优利德环境测量工具</div>
+        <div class="badge">工具 · 专为iPhone设计</div>
+        
+        <div class="description">
+            <p><strong>iENV</strong> 应用程序用于优利德温湿度计、噪音计、风速计、照度计、转速计等数据测量。</p>
+            <p style="margin-top: 12px;">通过蓝牙与 <strong>UT333 BT</strong>、<strong>UT353 BT</strong>、<strong>UT363 BT</strong>、<strong>UT383 BT</strong>、<strong>UT372D</strong>、<strong>UT325F</strong>、<strong>UT381A</strong>、<strong>UT382A</strong> 等设备连接，实时测量和记录数值。</p>
+        </div>
+
+        <!-- 手动下载按钮，作为Smart Banner的补充 -->
+        <a href="https://apps.apple.com/cn/app/ienv/id1260827700" class="download-btn">在 App Store 中打开</a>
+        
+        <div class="note">
+            <p>已安装 iENV？点击顶部横幅可直接打开 App。</p>
+            <p style="margin-top: 8px; font-size: 13px;">
+                开发者：<a href="https://apps.apple.com/cn/app/ienv/id1260827700" target="_blank">UNI-TREND TECHNOLOGY (CHINA) CO.,LTD.</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- 
+        可选的JavaScript：检测是否在iOS上，如果用户点击了通用链接但App未安装，
+        可以通过此脚本提供后备跳转，但通常情况下Smart Banner已经足够。
+    -->
+    <script>
+        (function() {
+            // 仅在iOS设备上执行相关检测（可选增强）
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+            if (!isIOS) {
+                // 在非iOS设备上，可以添加一些提示或不做处理
+                console.log('当前并非iOS设备，Smart Banner不会显示。');
+            }
+        })();
+    </script>
+
+</body>
+</html>
